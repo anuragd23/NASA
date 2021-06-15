@@ -25,6 +25,7 @@ async function loadLaunchesData() {
     const response = await axios.post(SPACEX_API_URL, {
             query: {},
             options: {
+                pagination: false,
                 populate:
             [
                 {
