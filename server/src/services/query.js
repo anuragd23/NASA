@@ -10,9 +10,9 @@ function getPagination(query) {
     return {
         skip,
         limit,
-    };
+    };    
+};
 
-    module.exports = {
-        getPagination,
-    }
+module.exports = {
+    getPagination,
 };
