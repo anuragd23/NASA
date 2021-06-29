@@ -24,7 +24,8 @@ jobs:
         uses: supercharge/mongodb-github-action@1.6.0
         with:
           mongodb-version: ${{ matrix.mongodb-version }}
-      - name: NPM or Yarn install with caching
-        uses: bahmutov/npm-install@v1.6.0
+      - run: npm cache clean --force
+      - run: npm ci
+      - run: npm install
       - run: npm run build --prefix client
       - run: npm test
